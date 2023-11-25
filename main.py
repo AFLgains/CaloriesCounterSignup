@@ -4,8 +4,6 @@ from dotenv import load_dotenv
 import os 
 from azure.data.tables import TableServiceClient
 
-
-load_dotenv()
 login_link = os.environ("LOGIN_LINK")
 
 with st.form("Register"):
