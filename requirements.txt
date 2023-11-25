@@ -1,3 +1,4 @@
 streamlit
 streamlit-authenticator=0.2.3
 azure-data-tables==12.4.4
+python-dotenv==1.0.0
