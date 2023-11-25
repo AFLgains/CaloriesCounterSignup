@@ -6,7 +6,7 @@ from azure.data.tables import TableServiceClient
 
 load_dotenv()
 
-login_link = st.secrets("LOGIN_LINK")
+login_link = st.secrets["LOGIN_LINK"]
 
 with st.form("Register"):
    st.title("Sign up for Calorie Counter")
@@ -24,7 +24,7 @@ with st.form("Register"):
    submitted = st.form_submit_button("Register")
    if submitted:
       if username != "" and last_name != "" and first_name != "" and email!="" and pw != "":
-         connection_string = st.secrets("CONNECTION_STRING")
+         connection_string = st.secrets["CONNECTION_STRING"]
          service = TableServiceClient.from_connection_string(conn_str=connection_string)
          new_entity = {
             u'PartitionKey': first_name,
